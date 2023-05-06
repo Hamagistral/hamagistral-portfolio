@@ -1121,13 +1121,21 @@ img{
     .project__container{
         background-color: var(--first-color-second);
         border-radius: 1rem;
-        padding: 3rem 2.5rem 0;
+        padding: 2.5rem 2rem 0;
         grid-template-columns: 1fr max-content;
         column-gap: 3rem;
     }
 
     .project__data{
-        padding-top: .8rem;
+        padding: 2rem;
+        border-radius: 1rem;
+        background-color: var(--input-color);
+    }
+
+    .blog__subtitle {
+        font-size: var(--small-font-size);
+        font-weight: var(--font-medium);
+        color: var(--first-color);
     }
 
     .footer__container{
