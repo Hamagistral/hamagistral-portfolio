@@ -842,6 +842,18 @@ img{
     margin-top: var(--mb-1); 
   }
 
+.project__data{
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--input-color);
+}
+
+.blog__subtitle {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    color: var(--first-color);
+}
+
 /*========== SCROLL UP ==========*/
 .scrollup{
     position: fixed;
@@ -949,6 +961,8 @@ img{
     .testimonial__description{
         text-align: center;
     }
+
+    
 }
 
 /* For medium devices */
@@ -960,7 +974,6 @@ img{
     .home__data{
         grid-column: initial;
     }
-
 
     .about__container,
     .skills__container,
@@ -976,7 +989,6 @@ img{
         grid-template-columns: .6fr;
         justify-content: center;
     }
-
 }
 
 @media screen and (min-width:768px){
@@ -1125,19 +1137,7 @@ img{
         grid-template-columns: 1fr max-content;
         column-gap: 3rem;
     }
-
-    .project__data{
-        padding: 2rem;
-        border-radius: 1rem;
-        background-color: var(--input-color);
-    }
-
-    .blog__subtitle {
-        font-size: var(--small-font-size);
-        font-weight: var(--font-medium);
-        color: var(--first-color);
-    }
-
+    
     .footer__container{
         grid-template-columns: repeat(3, 1fr);
     }
