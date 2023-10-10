@@ -685,8 +685,9 @@ img{
 
 .portfolio__img{
     width: 265px;
-    border-radius: .5rem;
+    border-radius: 1rem;
     justify-self: center;
+    margin-bottom: 2rem;
 }
 
 .portfolio__title{
