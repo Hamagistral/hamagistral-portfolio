@@ -175,7 +175,9 @@ img{
     bottom: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background-color: var(--body-color);
+    background-color: rgba(252, 254, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 /*==================== NAV ====================*/
 .nav{
@@ -209,7 +211,9 @@ img{
         bottom: -100%;
         left: 0;
         width: 100%;
-        background-color: var(--body-color);
+        background-color: rgba(252, 254, 255, 0.8);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
         padding: 2rem 1.5rem 4rem;
         box-shadow: 0 -1px 4px rgba(0,0,0,.15);
         border-radius: 1.5rem 1.5rem 0 0;
@@ -300,7 +304,7 @@ img{
 }
 
 .home__title{
-    font-size: var(--big-font-size);
+    font-size: var(--h1-font-size);
 }
 
 .home__subtitle{
@@ -395,9 +399,27 @@ img{
 /*==================== ABOUT ====================*/
 .about__img{
     width: 200px;
+    height: 200px;
     border-radius: .5rem;
     justify-self: center;
     align-self: center;
+    background-color: var(--input-color);
+}
+
+.about__img-container {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+model-viewer{
+    width: 400px;
+    height: 500px;
 }
 
 .about__description{
@@ -487,6 +509,16 @@ img{
     display: flex;
     height: 40px;
     border-radius: .25rem;
+}
+
+.skills__language {
+    display: inline-block;
+    font-size: var(--small-font-size);
+    color: var(--first-color);
+    font-weight: var(--font-medium);
+    background-color: var(--input-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
 }
 
 .skills__close .skills__list{
@@ -725,8 +757,17 @@ img{
     bottom: -2.5rem;
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet {
+    margin: 0 3px !important; /* Reduce margin between bullets */
+    width: 10px;
+    height: 10px;
+    background-color: var(--text-color-light);
+    opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
     background-color: var(--first-color);
+    opacity: 1;
 }
 
 .swiper-button-prev,
@@ -1210,4 +1251,126 @@ img{
     .contact__inputs{
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/*==================== PARTICLES ====================*/
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.home__container {
+    position: relative;
+    z-index: 2;
+}
+
+/*==================== PORTFOLIO HOVER EFFECTS ====================*/
+.portfolio__content {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio__content:hover {
+    transform: translateY(-10px);
+}
+
+.portfolio__img {
+    transition: all 0.3s ease;
+}
+
+.portfolio__content:hover .portfolio__img {
+    transform: scale(1.05);
+}
+
+/*==================== SKILLS ANIMATION ====================*/
+.skills__content {
+    transition: all 0.3s ease;
+}
+
+.skills__content:hover {
+    transform: translateY(-5px);
+}
+
+.skills__header {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.skills__header:hover {
+    color: var(--first-color);
+}
+
+/*==================== SOCIAL ICONS HOVER ====================*/
+.home__social-icon {
+    transition: all 0.3s ease;
+}
+
+.home__social-icon:hover {
+    transform: translateY(-5px);
+    color: var(--first-color);
+}
+
+/*==================== BUTTON HOVER ====================*/
+.button {
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+}
+
+/*==================== SCROLLUP HOVER ====================*/
+.scrollup {
+    transition: all 0.3s ease;
+}
+
+.scrollup:hover {
+    transform: translateY(-5px);
+}
+
+/*==================== TYPED TEXT ====================*/
+.typed-text {
+    color: var(--first-color);
+}
+
+/*==================== NAVIGATION HOVER ====================*/
+.nav__link {
+    transition: all 0.3s ease;
+}
+
+.nav__link:hover {
+    color: var(--first-color);
+    transform: translateY(-2px);
+}
+
+/*==================== QUALIFICATION HOVER ====================*/
+.qualification__data {
+    transition: all 0.3s ease;
+}
+
+.qualification__data:hover {
+    transform: translateX(5px);
+}
+
+/*==================== CONTACT FORM HOVER ====================*/
+.contact__input {
+    transition: all 0.3s ease;
+}
+
+.contact__input:focus {
+    transform: translateY(-2px);
+}
+
+/* Dark theme adjustments */
+body.dark-theme .header {
+    background-color: rgba(5, 17, 33, 0.8);
+}
+
+body.dark-theme .nav__menu {
+    background-color: rgba(5, 17, 33, 0.8);
 }

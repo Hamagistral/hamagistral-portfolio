@@ -7,6 +7,9 @@
         <!--==================== ICONS ====================-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
         
+        <!--==================== AOS ANIMATION ====================-->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        
         <!--==================== SWIPER CSS ====================-->
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
         
@@ -14,7 +17,7 @@
         <link rel="stylesheet" href="./assets/css/main.css">
 
         <link rel="icon" href="assets/img/icon.png">
-
+        <link rel="shortcut icon" href="assets/img/icon.png">
         <title>Hamza El Belghiti | Portfolio</title>
     </head>
     <body>
@@ -74,9 +77,10 @@
         <main class="main">
             <!--==================== HOME ====================-->
             <section class="home section" id="home">
+                <div id="particles-js"></div>
                 <div class="home__container container grid">
                     <div class="home__content grid">
-                        <div class="home__social">
+                        <div class="home__social" data-aos="fade-right">
                             <a href="https://www.linkedin.com/in/hamza-elbelghiti/" target="_blank" class="home__social-icon">
                                 <i class="uil uil-linkedin"></i>
                             </a>
@@ -97,18 +101,18 @@
                                 <i class="uil uil-envelope"></i>
                             </a>
                         </div>
-                        <div class="home__data">
+                        <div class="home__data" data-aos="fade-left">
                             <h1 class="home__title">
-                                👋🏻 Hi, I'm Hamza
+                                <span class="typed-text"></span>
                             </h1>
                             <h2 class="home__subtitle">
-                                Data Science & Engineering Student
+                                Analytics & AI Engineer @Blent.ai 👨🏻‍💻
                             </h2>
                             <p class="home__description">
-                                > Junior Data Engineer 👨‍🔧
+                                I'm a data enthusiast who turns complex information into actionable insights, making AI and analytics work for businesses while keeping things fun and innovative!
                             </p>
                             <div class="about__buttons">
-                                <a download="" href="assets/pdf/Hamza_ELBELGHITI_CV_alternance.pdf" target="_blank" class="button button--flex">
+                                <a download="" href="assets/pdf/Hamza.pdf" target="_blank" class="button button--flex">
                                     Resume
                                     <i class="uil uil-file-download-alt button__icon"></i>
                                 </a>
@@ -128,7 +132,7 @@
             </section>
 
             <!--==================== ABOUT ====================-->
-            <section class="about section" id="about">
+            <section class="about section" id="about" data-aos="fade-up">
                 <h2 class="section__title" style="margin-bottom: 4rem;">
                     About Me
                 </h2>
@@ -137,23 +141,22 @@
                     
                     <div class="about__data">
                         <p class="about__description" style="text-align: justify">
-                            « The world is one big data problem. » <br><br>
+                            « The world is one big data problem. »<br><br>
 
-                            This quote encapsulates the reason and passion that has driven my journey to dive deep into the data and AI world. Having a background in applied mathematics, I am currently enrolled in a data science and engineering master's degree.
-                            
-                            I'm driven to streamline data workflows, ensure data quality, and make data accessible for insightful analysis.
+                            This quote encapsulates the reason and passion that has driven my journey to dive deep into the data and AI world. With a background in data science and engineering, I am currently enrolled in a MIAGE master's degree with a specialization in Data Engineering.<br><br>
 
-                            My expertise spans Python, R, SQL, machine learning, data analysis, visualization, designing and implementing data pipelines with technologies like Terraform, Airflow, Spark, and cloud platforms like GCP, AWS, and Azure. <br><br>
-
-                            If you are seeking a dedicated data engineer passionate about leveraging data's power, let's connect and explore how we can make a difference together, one problem at a time.
+                            My enthusiasm lies in bridging the gap between complex data and practical applications that positively impact people's lives. As a data engineer, my goal is to create the foundations that support innovative data solutions, empowering organizations to harness the full potential of their data.
                         </p>
                     </div>               
-                    <img src="assets/img/hero.png" alt="My Picture" class="about__img"> 
+                    <div class="about__img-container">
+                        <model-viewer src="assets/room_lowpoly/scene.gltf" alt="Room Lowpoly" cdisable-tap auto-rotate shadow-intensity="1" disable-zoom camera-controls touch-action="pan-y" ios-src="assets/room_lowpoly/scene.gltf">
+                        </model-viewer>
+                    </div>
                 </div>
             </section>
 
             <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills">
+            <section class="skills section" id="skills" data-aos="fade-up">
                 <h2 class="section__title" style="margin-bottom: 5rem;">
                     Skills
                 </h2>
@@ -225,7 +228,7 @@
                                 <i class="uil uil-server-network-alt skills__icon"></i>
                                 <div>
                                     <h1 class="skills__title">
-                                        Data & Machine Learning
+                                        Data & AI
                                     </h1>
                                 </div>
                                 <i class="uil uil-angle-down skills__arrow"></i>
@@ -323,10 +326,109 @@
                                 <div class="skills__data">
                                     <div class="skills__titles">
                                         <h3 class="skills__name">
+                                            Airbyte
+                                        </h3>
+                                        <span class="skills__logo">
+                                            <img src="https://avatars.githubusercontent.com/u/68972385?s=280&v=4" />
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">
+                                            Mage
+                                        </h3>
+                                        <span class="skills__logo">
+                                            <img src="https://avatars.githubusercontent.com/u/112530025?s=280&v=4" />
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">
+                                            dbt
+                                        </h3>
+                                        <span class="skills__logo">
+                                            <img src="https://seeklogo.com/images/D/dbt-logo-500AB0BAA7-seeklogo.com.png" />
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">
+                                            Databricks
+                                        </h3>
+                                        <span class="skills__logo">
+                                            <img src="https://www.vectorlogo.zone/logos/databricks/databricks-icon.svg" />
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">
                                             Power BI
                                         </h3>
                                         <span class="skills__logo">
                                             <img src="https://cdn.corporatefinanceinstitute.com/assets/power-bi.png" alt="">
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">
+                                            Firebase
+                                        </h3>
+                                        <span class="skills__logo">
+                                            <img src="https://www.svgrepo.com/show/354012/looker-icon.svg" />
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">
+                                            Metabase
+                                        </h3>
+                                        <span class="skills__logo">
+                                            <img src="https://www.vectorlogo.zone/logos/metabase/metabase-icon.svg" />
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">
+                                            Langchain
+                                        </h3>
+                                        <span class="skills__logo">
+                                            <img src="https://avatars.githubusercontent.com/u/126733545?s=200&v=4" />
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">
+                                            HuggingFace
+                                        </h3>
+                                        <span class="skills__logo">
+                                            <img src="https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.svg" />
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">
+                                            Pinecone
+                                        </h3>
+                                        <span class="skills__logo">
+                                            <img src="https://cdn.worldvectorlogo.com/logos/pinecone-1.svg" />
                                         </span>
                                     </div>
                                 </div>
@@ -432,7 +534,7 @@
                                 <div class="skills__data">
                                     <div class="skills__titles">
                                         <h3 class="skills__name">
-                                            PostegreSQL
+                                            PostgreSQL
                                         </h3>
                                         <span class="skills__logo">
                                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg" />
@@ -458,6 +560,28 @@
                                         </h3>
                                         <span class="skills__logo">
                                             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" />
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">
+                                            BigQuery
+                                        </h3>
+                                        <span class="skills__logo">
+                                            <img src="https://cdn.worldvectorlogo.com/logos/google-bigquery-logo-1.svg" alt="">
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">
+                                            Snowflake
+                                        </h3>
+                                        <span class="skills__logo">
+                                            <img src="https://www.vectorlogo.zone/logos/snowflake/snowflake-icon.svg" alt="">
                                         </span>
                                     </div>
                                 </div>
@@ -670,6 +794,17 @@
                                     </div>
                                 </div>
 
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">
+                                            ClickUp
+                                        </h3>
+                                        <span class="skills__logo">
+                                            <img src="https://seeklogo.com/images/C/clickup-symbol-logo-BB24230BBB-seeklogo.com.png" />
+                                        </span>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -681,7 +816,7 @@
             </section>
 
             <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section" id="qualifications">
+            <section class="qualification section" id="qualifications" data-aos="fade-up">
                 <h2 class="section__title">Qualifications</h2>
                 <span class="section__subtitle"></span>
 
@@ -949,7 +1084,7 @@
             </section>
 
             <!--==================== PORTFOLIO ====================-->
-            <section class="portfolio section" id="portfolio">
+            <section class="portfolio section" id="portfolio" data-aos="fade-up">
                 <h2 class="section__title">
                     Projects
                 </h2>
@@ -1101,7 +1236,7 @@
             </section>
 
             <!--==================== PORTFOLIO ====================-->
-            <section class="portfolio section" id="portfolio">
+            <section class="portfolio section" id="portfolio" data-aos="fade-up">
 
                 <span class="section__subtitle">
                     Web Projects
@@ -1325,7 +1460,7 @@
                                     Location
                                 </h3>
                                 <span class="contact__subtitle">
-                                    Mohammedia, Morocco
+                                    Toulouse, France
                                 </span>
                             </div>
                         </div>
@@ -1347,7 +1482,7 @@
                         </div>
 
                         <div>
-                            <button type="submit" class="button button--flex" style="border: none;">
+                            <button type="submit" class="button button--flex" style="border: none; background-color: var(--first-color); color: #fff; padding: 1rem 1.75rem; border-radius: 0.5rem; font-weight: 500; transition: 0.3s;">
                                 Send Message
                                 <i class="uil uil-message button__icon"></i>
                             </button>
@@ -1377,10 +1512,27 @@
             <i class="uil uil-arrow-up scrollup__icon"></i>
         </a>
 
+        <!--==================== PARTICLES JS ====================-->
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+        <!--==================== BABYLON.JS ====================-->
+        <script src="https://cdn.babylonjs.com/babylon.js"></script>
+        <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+
+        <!--==================== TYPED JS ====================-->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+        <!--==================== AOS JS ====================-->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
         <!--==================== SWIPER JS ====================-->
         <script src="assets/js/swiper-bundle.min.js"></script>
 
         <!--==================== MAIN JS ====================-->
         <script src="assets/js/main.js"></script>
+
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    
     </body>
 </html>
