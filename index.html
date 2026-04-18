@@ -4,1484 +4,626 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--==================== ICONS ====================-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-        
-        <!--==================== AOS ANIMATION ====================-->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        
-        <!--==================== SWIPER CSS ====================-->
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-        
-        <!--==================== CSS ====================-->
         <link rel="stylesheet" href="./assets/css/main.css">
 
-        <link rel="icon" href="assets/img/icon.png">
-        <link rel="shortcut icon" href="assets/img/icon.png">
-        <title>Hamza El Belghiti | Portfolio</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+        <link rel="shortcut icon" href="assets/img/favicon.ico">
+        <title>Hamza El Belghiti | Data &amp; ML Engineer</title>
     </head>
     <body>
+
+        <!-- Custom cursor -->
+        <div class="cursor-dot" id="cursor-dot"></div>
+        <div class="cursor-ring" id="cursor-ring"></div>
+
+        <!-- Aurora background glows -->
+        <div class="aurora" aria-hidden="true">
+            <div class="aurora__orb aurora__orb--1"></div>
+            <div class="aurora__orb aurora__orb--2"></div>
+            <div class="aurora__orb aurora__orb--3"></div>
+            <div class="aurora__orb aurora__orb--4"></div>
+            <div class="aurora__orb aurora__orb--5"></div>
+        </div>
+
+        <!-- Fixed social sidebar -->
+        <div class="social-sidebar" aria-label="Social links">
+            <a href="https://www.linkedin.com/in/hamza-elbelghiti/" target="_blank" class="social-sidebar__icon" title="LinkedIn"><i class="uil uil-linkedin"></i></a>
+            <a href="https://github.com/Hamagistral" target="_blank" class="social-sidebar__icon" title="GitHub"><i class="uil uil-github"></i></a>
+            <a href="https://medium.com/@hamza.lbelghiti" target="_blank" class="social-sidebar__icon" title="Medium"><i class="uil uil-medium-m"></i></a>
+            <a href="https://www.youtube.com/channel/UCfO7NQVb2LYHIejfJSmst6Q" target="_blank" class="social-sidebar__icon" title="YouTube"><i class="uil uil-youtube"></i></a>
+            <a href="mailto:hamza.lbelghiti@gmail.com" target="_blank" class="social-sidebar__icon" title="Email"><i class="uil uil-envelope"></i></a>
+            <div class="social-sidebar__line"></div>
+        </div>
+
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo">
-                    <p>&lt;Hamza El Belghiti /&gt;</p>
-                </a>
+            <nav class="nav">
+                <a href="#" class="nav__logo">&lt;Hamagistral /&gt;</a>
+
                 <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list grid">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link active-link">
-                                <i class="uil uil-estate nav__icon"></i>Home
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">
-                                <i class="uil uil-user nav__icon"></i>About
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="uil uil-file-alt nav__icon"></i>Skills
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#qualifications" class="nav__link">
-                                <i class="uil uil-graduation-cap nav__icon"></i>Education
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#portfolio" class="nav__link">
-                                <i class="uil uil-scenery nav__icon"></i>Projects
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link">
-                                <i class="uil uil-message nav__icon"></i>Contact
-                            </a>
-                        </li>
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active-link"><i class="uil uil-estate nav__icon"></i>Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link"><i class="uil uil-user nav__icon"></i>About</a></li>
+                        <li class="nav__item"><a href="#skills" class="nav__link"><i class="uil uil-file-alt nav__icon"></i>Skills</a></li>
+                        <li class="nav__item"><a href="#qualifications" class="nav__link"><i class="uil uil-graduation-cap nav__icon"></i>Experience</a></li>
+                        <li class="nav__item"><a href="#portfolio" class="nav__link"><i class="uil uil-scenery nav__icon"></i>Projects</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link"><i class="uil uil-message nav__icon"></i>Contact</a></li>
                     </ul>
                     <i class="uil uil-times nav__close" id="nav-close"></i>
                 </div>
-                <div class="nav__btns">
-                    <!-- Theme change button -->
-                    <i class="uil uil-moon change-theme" id="theme-button"></i>
 
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="uil uil-apps"></i>
-                    </div>
+                <div class="nav__btns">
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+                    <div class="nav__toggle" id="nav-toggle"><i class="uil uil-bars"></i></div>
                 </div>
             </nav>
         </header>
 
-        <!--==================== MAIN ====================-->
         <main class="main">
+
             <!--==================== HOME ====================-->
             <section class="home section" id="home">
-                <div id="particles-js"></div>
-                <div class="home__container container grid">
-                    <div class="home__content grid">
-                        <div class="home__social" data-aos="fade-right">
-                            <a href="https://www.linkedin.com/in/hamza-elbelghiti/" target="_blank" class="home__social-icon">
-                                <i class="uil uil-linkedin"></i>
-                            </a>
+                <canvas id="hero-canvas"></canvas>
 
-                            <a href="https://github.com/Hamagistral" target="_blank" class="home__social-icon">
-                                <i class="uil uil-github"></i>
-                            </a>
+                <div class="home__container container">
+                    <div class="home__content">
+                        <span class="home__label">Data &amp; ML Engineer</span>
 
-                            <a href="https://medium.com/@hamza.lbelghiti" target="_blank" class="home__social-icon">
-                                <i class="uil uil-medium-m"></i>
-                            </a>
+                        <h1 class="home__title"><span class="typed-text"></span></h1>
 
-                            <a href="https://www.youtube.com/channel/UCfO7NQVb2LYHIejfJSmst6Q" target="_blank" class="home__social-icon">
-                                <i class="uil uil-youtube"></i>
-                            </a>
+                        <h2 class="home__subtitle">Data Analyst @ Airbus ✈️</h2>
 
-                            <a href="mailto:hamza.lbelghiti@gmail.com" target="_blank" class="home__social-icon">
-                                <i class="uil uil-envelope"></i>
+                        <p class="home__description">
+                            I turn complex data into actionable insights — building pipelines, AI systems, and dashboards that drive real business decisions.
+                        </p>
+
+                        <div class="home__buttons about__buttons">
+                            <a download="" href="assets/pdf/Resume_Hamza_ELBELGHITI_en.pdf" target="_blank" class="button button--flex">
+                                Resume <i class="uil uil-file-download-alt button__icon"></i>
+                            </a>
+                            <a href="#contact" class="button button--flex button--white">
+                                Contact me <i class="uil uil-message button__icon"></i>
                             </a>
                         </div>
-                        <div class="home__data" data-aos="fade-left">
-                            <h1 class="home__title">
-                                <span class="typed-text"></span>
-                            </h1>
-                            <h2 class="home__subtitle">
-                                Analytics & AI Engineer @Blent.ai 👨🏻‍💻
-                            </h2>
-                            <p class="home__description">
-                                I'm a data enthusiast who turns complex information into actionable insights, making AI and analytics work for businesses while keeping things fun and innovative!
-                            </p>
-                            <div class="about__buttons">
-                                <a download="" href="assets/pdf/Resume_Hamza_ELBELGHITI.pdf" target="_blank" class="button button--flex">
-                                    Resume
-                                    <i class="uil uil-file-download-alt button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
                     </div>
-                    <div class="home__scroll">
-                        <a href="#about" class="home__scroll-button button--flex">
-                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                            <span class="home__scroll-name">
-                                Scroll down
-                            </span>
-                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
-                        </a>
-                    </div>
+                </div>
+
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-button button--flex">
+                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                        <span class="home__scroll-name">Scroll down</span>
+                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                    </a>
                 </div>
             </section>
 
             <!--==================== ABOUT ====================-->
             <section class="about section" id="about" data-aos="fade-up">
-                <h2 class="section__title" style="margin-bottom: 4rem;">
-                    About Me
-                </h2>
-                
+                <h2 class="section__title gradient-title">About <span class="gradient-accent">Me</span></h2>
+                <span class="section__subtitle">// who I am</span>
+
                 <div class="about__container container grid">
-                    
                     <div class="about__data">
-                        <p class="about__description" style="text-align: justify">
-                            « The world is one big data problem. »<br><br>
+                        <p class="about__description">
+                            <span class="quote">« The world is one big data problem. »</span>
 
-                            This quote encapsulates the reason and passion that has driven my journey to dive deep into the data and AI world. With a background in data science and engineering, I am currently enrolled in a MIAGE master's degree with a specialization in Data Engineering.<br><br>
+                            This quote drives my passion for the data and AI world. With a background in data science and engineering, I'm currently enrolled in a MIAGE Master's degree specializing in Data Engineering at Université Toulouse III, while working as a <strong style="color: var(--cyan);">Data Analyst at Airbus</strong>.<br><br>
 
-                            My enthusiasm lies in bridging the gap between complex data and practical applications that positively impact people's lives. As a data engineer, my goal is to create the foundations that support innovative data solutions, empowering organizations to harness the full potential of their data.
+                            My enthusiasm lies in bridging the gap between complex data and practical applications — from building ELT pipelines and ML models to crafting dashboards that help teams make better decisions.
                         </p>
-                    </div>               
+
+                        <div class="about__buttons">
+                            <a download="" href="assets/pdf/Resume_Hamza_ELBELGHITI_en.pdf" target="_blank" class="button button--flex">
+                                Download Resume <i class="uil uil-file-download-alt button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
                     <div class="about__img-container">
-                        <model-viewer src="assets/room_lowpoly/scene.gltf" alt="Room Lowpoly" cdisable-tap auto-rotate shadow-intensity="1" disable-zoom camera-controls touch-action="pan-y" ios-src="assets/room_lowpoly/scene.gltf">
-                        </model-viewer>
+                        <canvas id="about-canvas"></canvas>
                     </div>
                 </div>
             </section>
 
             <!--==================== SKILLS ====================-->
             <section class="skills section" id="skills" data-aos="fade-up">
-                <h2 class="section__title" style="margin-bottom: 5rem;">
-                    Skills
-                </h2>
+                <h2 class="section__title gradient-title">Tech <span class="gradient-accent">Stack</span></h2>
+                <span class="section__subtitle">// skills &amp; tools</span>
+
                 <div class="skills__container container grid">
                     <div>
-                        <!--==================== SKILLS 1 ====================-->
                         <div class="skills__content skills__close">
                             <div class="skills__header">
                                 <i class="uil uil-brackets-curly skills__icon"></i>
-                                <div>
-                                    <h1 class="skills__title">
-                                        Programming Languages
-                                    </h1>
-                                </div>
+                                <h1 class="skills__title">Programming Languages</h1>
                                 <i class="uil uil-angle-down skills__arrow"></i>
                             </div>
                             <div class="skills__list grid">
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Python
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Java
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            C
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            R
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Python</h3><span class="skills__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Java</h3><span class="skills__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">C</h3><span class="skills__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">R</h3><span class="skills__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" /></span></div></div>
                             </div>
                         </div>
 
-                        <!--==================== SKILLS 2 ====================-->
                         <div class="skills__content skills__close">
                             <div class="skills__header">
                                 <i class="uil uil-server-network-alt skills__icon"></i>
-                                <div>
-                                    <h1 class="skills__title">
-                                        Data & AI
-                                    </h1>
-                                </div>
+                                <h1 class="skills__title">Data &amp; AI</h1>
                                 <i class="uil uil-angle-down skills__arrow"></i>
                             </div>
                             <div class="skills__list grid">
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            TensorFlow
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Scikit Learn
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png" alt="">
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Pandas
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://github.com/devicons/devicon/raw/master/icons/pandas/pandas-original.svg" alt="">
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Numpy
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://github.com/devicons/devicon/raw/master/icons/numpy/numpy-original.svg" alt="">
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Selenium
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Airflow
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cwiki.apache.org/confluence/download/attachments/145723561/airflow_transparent.png?api=v2" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Kafka
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Spark
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://www.vectorlogo.zone/logos/apache_spark/apache_spark-icon.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Airbyte
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://avatars.githubusercontent.com/u/68972385?s=280&v=4" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Mage
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://avatars.githubusercontent.com/u/112530025?s=280&v=4" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            dbt
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://seeklogo.com/images/D/dbt-logo-500AB0BAA7-seeklogo.com.png" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Databricks
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://www.vectorlogo.zone/logos/databricks/databricks-icon.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Power BI
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.corporatefinanceinstitute.com/assets/power-bi.png" alt="">
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Firebase
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://www.svgrepo.com/show/354012/looker-icon.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Metabase
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://www.vectorlogo.zone/logos/metabase/metabase-icon.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Langchain
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://avatars.githubusercontent.com/u/126733545?s=200&v=4" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            HuggingFace
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Pinecone
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.worldvectorlogo.com/logos/pinecone-1.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Airflow</h3><span class="skills__logo"><img src="https://cwiki.apache.org/confluence/download/attachments/145723561/airflow_transparent.png?api=v2" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">dbt</h3><span class="skills__logo"><img src="https://seeklogo.com/images/D/dbt-logo-500AB0BAA7-seeklogo.com.png" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Airbyte</h3><span class="skills__logo"><img src="https://plgdemos.com/content/images/2024/04/airbyte-logo-CC005A0105-seeklogo.com.png" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Spark</h3><span class="skills__logo"><img src="https://www.vectorlogo.zone/logos/apache_spark/apache_spark-icon.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Kafka</h3><span class="skills__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Databricks</h3><span class="skills__logo"><img src="https://www.vectorlogo.zone/logos/databricks/databricks-icon.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Power BI</h3><span class="skills__logo"><img src="https://cdn.corporatefinanceinstitute.com/assets/power-bi.png" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Langchain</h3><span class="skills__logo"><img src="https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/langchain-ipuhh4qo1jz5ssl4x0g2a.png/langchain-dp1uxj2zn3752pntqnpfu2.png?_a=DATAiZAAZAA0" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">HuggingFace</h3><span class="skills__logo"><img src="https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Scikit-learn</h3><span class="skills__logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1280px-Scikit_learn_logo_small.svg.png" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">TensorFlow</h3><span class="skills__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Pinecone</h3><span class="skills__logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXXnKphrlQj3AWTaZ6a_ZC3jnB8aZzt-TWkw&s" /></span></div></div>
                             </div>
                         </div>
-                        <!--==================== SKILLS 5 ====================-->
+
                         <div class="skills__content skills__close">
                             <div class="skills__header">
                                 <i class="uil uil-cloud-computing skills__icon"></i>
-                                <div>
-                                    <h1 class="skills__title">
-                                        Cloud
-                                    </h1>
-                                </div>
+                                <h1 class="skills__title">Cloud</h1>
                                 <i class="uil uil-angle-down skills__arrow"></i>
                             </div>
                             <div class="skills__list grid">
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            AWS
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://github.com/devicons/devicon/raw/master/icons/amazonwebservices/amazonwebservices-original.svg" alt="">
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Google Cloud
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://github.com/devicons/devicon/raw/master/icons/googlecloud/googlecloud-original.svg" alt="">
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Azure
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://github.com/devicons/devicon/raw/master/icons/azure/azure-original.svg" alt="">
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Firebase
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" />
-                                        </span>
-                                    </div>
-                                </div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">GCP</h3><span class="skills__logo"><img src="https://github.com/devicons/devicon/raw/master/icons/googlecloud/googlecloud-original.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">AWS</h3><span class="skills__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/icons/amazonwebservices/amazonwebservices-original.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Azure</h3><span class="skills__logo"><img src="https://github.com/devicons/devicon/raw/master/icons/azure/azure-original.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Skywise</h3><span class="skills__logo"><img src="https://media.licdn.com/dms/image/v2/D4E0BAQGjFocM4JGHDw/company-logo_200_200/B4EZ1na0ZBJ4AM-/0/1775556577279/airbus_skywise_logo?e=2147483647&v=beta&t=LhLQ5KQ_QRhkGgWIo4yFuwzzCazf9815bj20MXWjaak" /></span></div></div>
                             </div>
                         </div>
                     </div>
 
                     <div>
-                        <!--==================== SKILLS 3 ====================-->
                         <div class="skills__content skills__close">
                             <div class="skills__header">
                                 <i class="uil uil-swatchbook skills__icon"></i>
-                                <div>
-                                    <h1 class="skills__title">
-                                        Databases
-                                    </h1>
-                                </div>
+                                <h1 class="skills__title">Databases</h1>
                                 <i class="uil uil-angle-down skills__arrow"></i>
                             </div>
                             <div class="skills__list grid">
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            MySQL
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://github.com/devicons/devicon/raw/master/icons/mysql/mysql-original.svg" alt="">
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            SQLite
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            PostgreSQL
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            MongoDB
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://github.com/devicons/devicon/raw/master/icons/mongodb/mongodb-original.svg" alt="">
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Oracle
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            BigQuery
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.worldvectorlogo.com/logos/google-bigquery-logo-1.svg" alt="">
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Snowflake
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://www.vectorlogo.zone/logos/snowflake/snowflake-icon.svg" alt="">
-                                        </span>
-                                    </div>
-                                </div>
-
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">BigQuery</h3><span class="skills__logo"><img src="https://cdn.worldvectorlogo.com/logos/google-bigquery-logo-1.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">PostgreSQL</h3><span class="skills__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">MongoDB</h3><span class="skills__logo"><img src="https://github.com/devicons/devicon/raw/master/icons/mongodb/mongodb-original.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Snowflake</h3><span class="skills__logo"><img src="https://www.vectorlogo.zone/logos/snowflake/snowflake-icon.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">MySQL</h3><span class="skills__logo"><img src="https://github.com/devicons/devicon/raw/master/icons/mysql/mysql-original.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Oracle</h3><span class="skills__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" /></span></div></div>
                             </div>
                         </div>
-                    
-                        <!--==================== SKILLS 4 ====================-->
+
                         <div class="skills__content skills__close">
                             <div class="skills__header">
                                 <i class="uil uil-scenery skills__icon"></i>
-                                <div>
-                                    <h1 class="skills__title">
-                                        Web Development
-                                    </h1>
-                                </div>
+                                <h1 class="skills__title">Web Development</h1>
                                 <i class="uil uil-angle-down skills__arrow"></i>
                             </div>
                             <div class="skills__list grid">
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            HTML
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            CSS
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Tailwindcss
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            JavaScript
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-                                
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            TypeScript
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            React
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-                                
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Node.js
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Nextjs
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Django
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            FastAPI
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Streamlit
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/z3ahdkytzwi1jxlpazje" alt="">
-                                        </span>
-                                    </div>
-                                </div>
-
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">React</h3><span class="skills__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Next.js</h3><span class="skills__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">FastAPI</h3><span class="skills__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Django</h3><span class="skills__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Streamlit</h3><span class="skills__logo"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/streamlit-icon.png" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Tailwind</h3><span class="skills__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" /></span></div></div>
                             </div>
                         </div>
 
-                        <!--==================== SKILLS 5 ====================-->
                         <div class="skills__content skills__close">
                             <div class="skills__header">
                                 <i class="uil uil-apps skills__icon"></i>
-                                <div>
-                                    <h1 class="skills__title">
-                                        Other Tools
-                                    </h1>
-                                </div>
+                                <h1 class="skills__title">Other Tools</h1>
                                 <i class="uil uil-angle-down skills__arrow"></i>
                             </div>
                             <div class="skills__list grid">
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Docker
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://github.com/devicons/devicon/raw/master/icons/docker/docker-original.svg" alt="">
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Terraform
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Linux
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Git
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://github.com/devicons/devicon/raw/master/icons/git/git-original.svg" alt="">
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            Jira
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" />
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">
-                                            ClickUp
-                                        </h3>
-                                        <span class="skills__logo">
-                                            <img src="https://seeklogo.com/images/C/clickup-symbol-logo-BB24230BBB-seeklogo.com.png" />
-                                        </span>
-                                    </div>
-                                </div>
-
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Docker</h3><span class="skills__logo"><img src="https://github.com/devicons/devicon/raw/master/icons/docker/docker-original.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Terraform</h3><span class="skills__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Linux</h3><span class="skills__logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" /></span></div></div>
+                                <div class="skills__data"><div class="skills__titles"><h3 class="skills__name">Git</h3><span class="skills__logo"><img src="https://github.com/devicons/devicon/raw/master/icons/git/git-original.svg" /></span></div></div>
                             </div>
                         </div>
                     </div>
-                    </div>
-                </div>
-                <div>
-                    
                 </div>
             </section>
 
             <!--==================== QUALIFICATION ====================-->
             <section class="qualification section" id="qualifications" data-aos="fade-up">
-                <h2 class="section__title">Qualifications</h2>
-                <span class="section__subtitle"></span>
+                <h2 class="section__title gradient-title">My Career <span class="gradient-accent">Journey</span></h2>
+                <span class="section__subtitle">// experience &amp; education</span>
 
                 <div class="qualification__container container">
                     <div class="qualification__tabs">
-                        <div class="qualification__button button--flex qualification__active" data-target="#education">
-                            <i class="uil uil-graduation-cap qualification__icon"></i>
-                            Education
+                        <div class="qualification__button button--flex qualification__active" data-target="#work">
+                            <i class="uil uil-bag qualification__icon"></i>Experience
                         </div>
-
-                        <div class="qualification__button button--flex" data-target="#work">
-                            <i class="uil uil uil-bag qualification__icon"></i>
-                            Experience
+                        <div class="qualification__button button--flex" data-target="#education">
+                            <i class="uil uil-graduation-cap qualification__icon"></i>Education
                         </div>
                     </div>
 
                     <div class="qualification__sections">
-                        <!--==================== QUALIFICATION CONTENT 1====================-->
-                        <div class="qualification__content qualification__active" data-content id="education">
 
-                            <!--==================== QUALIFICATION 1 ====================-->
+                        <div class="qualification__content qualification__active" data-content id="work">
+
                             <div class="qualification__data">
+                                <div></div>
+                                <div><span class="qualification__rounder"></span><span class="qualification__line"></span></div>
                                 <div>
-
-                                </div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-
-                                <div>
-                                    <h3 class="qualification__title">
-                                        MS. Ingénierie des Données et Protection (IDP)
-                                    </h3>
-                                    <span class="qualification__subtitle">
-                                        Faculty of Sciences and Engineering (FSI), Toulouse
-                                    </span>
-                                    <div class="qualification__calender">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2024-2026
-                                    </div>
-                                    <br>
-                                    <span class="qualification__subtitle">
-                                        <strong>Skills:</strong> Cloud & DevOps · Big Data · AI Projects · Data Governance · Data Project Architecture · Agile Project Management 
-                                    </span>
+                                    <h3 class="qualification__title">Data Analyst | Apprenticeship</h3>
+                                    <span class="qualification__subtitle">Airbus · Toulouse, France</span>
+                                    <div class="qualification__calender"><i class="uil uil-calendar-alt"></i> Sep 2025 – Aug 2026</div>
                                 </div>
                             </div>
 
-                            <!--==================== QUALIFICATION 1 ====================-->
                             <div class="qualification__data">
                                 <div>
-                                    <h3 class="qualification__title">
-                                        MS. Data Science and Engineering
-                                    </h3>
-                                    <span class="qualification__subtitle">
-                                        Faculty of Sciences of Rabat (FSR), Rabat
-                                    </span>
-                                    <div class="qualification__calender">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2022-2024
-                                    </div>
-                                    <br>
-                                    <span class="qualification__subtitle">
-                                        <strong>Skills:</strong> Python · Java · Extract, Transform, Load (ETL) · Web Development · Oracle Database Administration · Cybersecurity · Datamining · Business Intelligence · Data Science · Deep Learning · Big Data
-                                    </span>
+                                    <h3 class="qualification__title">Analytics Engineer | Apprenticeship</h3>
+                                    <span class="qualification__subtitle">Blent.ai · Paris, France · Remote</span>
+                                    <div class="qualification__calender"><i class="uil uil-calendar-alt"></i> Sep 2024 – Jul 2025</div>
                                 </div>
+                                <div><span class="qualification__rounder"></span><span class="qualification__line"></span></div>
+                                <div></div>
+                            </div>
 
+                            <div class="qualification__data">
+                                <div></div>
+                                <div><span class="qualification__rounder"></span><span class="qualification__line"></span></div>
                                 <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-
+                                    <h3 class="qualification__title">Analytics Engineer | Internship</h3>
+                                    <span class="qualification__subtitle">Blent.ai · Paris, France · Remote</span>
+                                    <div class="qualification__calender"><i class="uil uil-calendar-alt"></i> Feb 2024 – Jul 2024</div>
                                 </div>
                             </div>
 
-                            <!--==================== QUALIFICATION 2 ====================-->
                             <div class="qualification__data">
                                 <div>
-
+                                    <h3 class="qualification__title">ML Engineer | Internship</h3>
+                                    <span class="qualification__subtitle">3D Smart Factory · Mohammedia, Morocco</span>
+                                    <div class="qualification__calender"><i class="uil uil-calendar-alt"></i> Jun 2023 – Sep 2023</div>
                                 </div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-
-                                <div>
-                                    <h3 class="qualification__title">
-                                        BASC. Applied Mathematics
-                                    </h3>
-                                    <span class="qualification__subtitle">
-                                        Faculty of Sciences and Techniques (FSTM), Mohammedia
-                                    </span>
-                                    <div class="qualification__calender">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2019-2022
-                                    </div>
-                                    <br>
-                                    <span class="qualification__subtitle">
-                                        <strong>Skills:</strong> SQL · C · Calculus · Data Structures · Probability · Statistics · Linear Algebra · Relational Databases SQL
-                                    </span>
-                                </div>
+                                <div><span class="qualification__rounder"></span><span class="qualification__line"></span></div>
+                                <div></div>
                             </div>
 
-                            <!--==================== QUALIFICATION 3 ====================-->
                             <div class="qualification__data">
+                                <div></div>
+                                <div><span class="qualification__rounder"></span></div>
                                 <div>
-                                    <h3 class="qualification__title">
-                                        Baccalaureate in Physical Sciences
-                                    </h3>
-                                    <span class="qualification__subtitle">
-                                        Newton High School, Mohammedia
-                                    </span>
-                                    <div class="qualification__calender">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        2019
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <!-- <span class="qualification__line"></span> -->
-
+                                    <h3 class="qualification__title">Front End Task Lead | Internship</h3>
+                                    <span class="qualification__subtitle">Omdena · Île-de-France, France · Remote</span>
+                                    <div class="qualification__calender"><i class="uil uil-calendar-alt"></i> May 2023 – Jun 2023</div>
                                 </div>
                             </div>
-                        
                         </div>
 
-                        <!--==================== QUALIFICATION CONTENT 2====================-->
-                        <div class="qualification__content" data-content id="work">
-                             <!--==================== QUALIFICATION 2 ====================-->
-                             <div class="qualification__data">
-                                <div>
+                        <div class="qualification__content" data-content id="education">
 
-                                </div>
-
+                            <div class="qualification__data">
+                                <div></div>
+                                <div><span class="qualification__rounder"></span><span class="qualification__line"></span></div>
                                 <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-
-                                <div>
-                                    <h3 class="qualification__title">
-                                        Data Engineer | Internship
-                                    </h3>
-                                    <span class="qualification__subtitle">
-                                        Blent.ai · Paris, France · Remote
-                                    </span>
-                                    <div class="qualification__calender">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Feb 2024 - Jul 2024
-                                    </div>
+                                    <h3 class="qualification__title">MS. Data Engineering &amp; Protection (MIAGE IDP)</h3>
+                                    <span class="qualification__subtitle">Université Toulouse III – Paul Sabatier, France</span>
+                                    <div class="qualification__calender"><i class="uil uil-calendar-alt"></i> 2024 – 2026</div>
                                     <br>
-                                    <span class="qualification__subtitle">
-                                        • Implemented automated ELT pipelines to feed the Customer Data Platform on the Data Warehouse from sources like Hubspot, Retool, Zoom, MongoDB etc. <br>
-                                        • Developed Reverse ETLs for marketing tools such as Hubspot and CustomerIO.<br>
-                                        • Constructed a sales dashboard to analyze customer data (clients and leads), and a marketing dashboard to analyze marketing strategies.<br><br>
-
-                                        𝗖𝗼𝗻𝘀𝘂𝗹𝘁𝗶𝗻𝗴 𝗳𝗼𝗿 𝗗𝗚𝗔𝗖:<br>
-                                        • Automated the workflow of extracting complex pieces of information from PDFs of aerodromes in France using an LLM.<br><br>
-
-                                        𝗘𝗱𝘂𝗰𝗮𝘁𝗶𝗼𝗻𝗮𝗹 𝗰𝗼𝗻𝘁𝗲𝗻𝘁:<br>
-                                        • Wrote notebooks and tutorials about Analytics Engineering (dbt and Airflow) for the Data Engineering course.<br>
-                                        • Created SQL and Python Coding Challenges.<br><br>
-
-                                        𝗧𝗼𝗼𝗹𝘀: Airbyte, Mage, BigQuery, dbt, Looker Studio, Open Metadata, CustomerIO API, Langchain, PDFplumber, OpenAI API, ChromaDB, Streamlit
-                                    </span>
+                                    <span class="qualification__subtitle"><strong>Courses:</strong> Cloud &amp; DevOps · Big Data · Gen AI · Data Governance · Agile PM</span>
                                 </div>
                             </div>
 
-                            <!--==================== QUALIFICATION 1 ====================-->
                             <div class="qualification__data">
                                 <div>
-                                    <h3 class="qualification__title">
-                                        Full Stack Developer | Internship
-                                    </h3>
-                                    <span class="qualification__subtitle">
-                                        3D Smart Factory · Mohammedia, Morocco · Hybrid
-                                    </span>
-                                    <div class="qualification__calender">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Jul 2023 - Sep 2023
-                                    </div>
+                                    <h3 class="qualification__title">MS. Data Science &amp; Engineering</h3>
+                                    <span class="qualification__subtitle">Faculty of Sciences of Rabat (FSR), Morocco</span>
+                                    <div class="qualification__calender"><i class="uil uil-calendar-alt"></i> 2022 – 2024</div>
                                     <br>
-                                    <span class="qualification__subtitle">
-                                        • Deployed the MeshSegNet deep learning model that does precise 3D dental scan segmentation, using a RESTful API FastAPI. Hosted the API on AWS Cloud using Docker, AWS ECR, Lambda, and API Gateway, ensuring scalability and reliability. Reduced the cost of usage from 85$/month to 1.3$ per 1000 requests.<br><br>
-                                        • Created an intuitive user interface using Vite, React.js, Three.js, and VTK.js, allowing dental professionals to seamlessly upload, segment, and analyze intraoral scans in 3D.<br><br>
-                                        • Integrated Firebase Auth for authentication using a Google, or a Github account. Used the Open AI API to create an AI assistant chatbot that guides the website users to use the different features.<br><br>
-                                        • Deployed the web application using Vercel.<br><br>
-
-                                        <a href="https://teethseg-ai.vercel.app" style="color: #44a5e9;">🖱️ Live Demo</a><br>
-                                        <a href="https://github.com/Hamagistral/TeethSeg" style="color: #44a5e9;">💻 Github Repository</a>
-                                        
-                                    </span>
+                                    <span class="qualification__subtitle"><strong>Courses:</strong> Big Data · BI · Data Science · Deep Learning · Cybersecurity</span>
                                 </div>
+                                <div><span class="qualification__rounder"></span><span class="qualification__line"></span></div>
+                                <div></div>
+                            </div>
 
+                            <div class="qualification__data">
+                                <div></div>
+                                <div><span class="qualification__rounder"></span><span class="qualification__line"></span></div>
                                 <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-
+                                    <h3 class="qualification__title">BASC. Applied Mathematics</h3>
+                                    <span class="qualification__subtitle">FSTM, Mohammedia, Morocco</span>
+                                    <div class="qualification__calender"><i class="uil uil-calendar-alt"></i> 2019 – 2022</div>
                                 </div>
                             </div>
 
-                            <!--==================== QUALIFICATION 2 ====================-->
                             <div class="qualification__data">
                                 <div>
-
+                                    <h3 class="qualification__title">Baccalaureate in Physical Sciences</h3>
+                                    <span class="qualification__subtitle">Newton High School, Mohammedia</span>
+                                    <div class="qualification__calender"><i class="uil uil-calendar-alt"></i> 2019</div>
                                 </div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                    <span class="qualification__line"></span>
-                                </div>
-
-                                <div>
-                                    <h3 class="qualification__title">
-                                        Front End Task Lead | Internship
-                                    </h3>
-                                    <span class="qualification__subtitle">
-                                        Omdena • Île-de-France, France · Remote
-                                    </span>
-                                    <div class="qualification__calender">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        May 2023 - Jun 2023
-                                    </div>
-                                    <br>
-                                    <span class="qualification__subtitle">
-                                        • Led a team in developing an AI-driven transportation chatbot application for Île-de-France. Utilized Streamlit and Folium for the front-end, integrated web scraping of the RATP website for real-time traffic status, and managed data uploads to an AWS S3 bucket with an ETL using the AWS Lambda function.<br><br>
-                                        • Created an algorithm that calculated the nearest available transportation station based on user preferences and location, ultimately reducing the impact of transportation disruptions in Île-de-France and offering personalized alternative routes and directions.<br><br>
-                                        • Implemented a version using the Navitia API, ensuring accurate and up-to-date transportation data retrieval by communicating directly with RATP's non-public API, enhancing the chatbot's reliability.<br><br>
-                                        • Enhanced user interaction by integrating a dynamic chatbot UI alongside the Folium map, improving user engagement and accessibility to personalized alternative transportation information during strikes.
-                                    </span>
-                                </div>
+                                <div><span class="qualification__rounder"></span></div>
+                                <div></div>
                             </div>
 
-                            <!--==================== QUALIFICATION 3 ====================-->
-                            <div class="qualification__data">
-                                <div>
-                                    <h3 class="qualification__title">
-                                        End of Studies Bachelor Internship Project
-                                    </h3>
-                                    <span class="qualification__subtitle">
-                                        Faculty of Sciences and Techniques of Mohammedia (FSTM) · Mohammedia, Morocco · On-site
-                                    </span>
-                                    <div class="qualification__calender">
-                                        <i class="uil uil-calendar-alt"></i>
-                                        Apr 2022 - Jun 2022
-                                    </div>
-                                    <br>
-                                    <span class="qualification__subtitle">
-                                        • Developed a predictive model for Airbnb hosts to optimize rental prices using supervised machine learning techniques, including K-Nearest Neighbors (KNN).<br><br>
-                                        • Utilized a range of technologies, including Python, Pandas, NumPy, Scikit-learn, Matplotlib, and Seaborn, to analyze data and fine-tune pricing strategies.<br><br>
-                                        • Explored the integration of the pricing model into Airbnb's backend, simplifying the process for hosts to set competitive rental prices based on property characteristics.
-                                    </span>
-                                </div>
-
-                                <div>
-                                    <span class="qualification__rounder"></span>
-                                </div>
-                            </div>
-                            
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!--==================== PORTFOLIO ====================-->
-            <section class="portfolio section" id="portfolio" data-aos="fade-up">
-                <h2 class="section__title">
-                    Projects
-                </h2>
-
-                <span class="section__subtitle" style="margin-top: 2rem;">
-                    Data & ML Projects
-                </span>
-
-                <div class="portfolio__container container swiper-container">
-                    <div class="swiper-wrapper">
-
-                        <!--==================== PORTFOLIO 1 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/dataeng.PNG" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">
-                                    Data Engineering Jobs
-                                </h3>
-                                <p class="portfolio__description">
-                                    Analyzing the Data Engineers Job Market in the USA and Predicting Salaries
-                                </p>
-                                <a href="https://jobsglassdoor-dataengineers.streamlit.app/" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                                <a href="https://github.com/Hamagistral/DataEngineers-Glassdoor" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Repository
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 3 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/etlonlineretail.png" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">
-                                    👨‍🔧 Online Retail Data Pipeline
-                                </h3>
-                                <p class="portfolio__description">
-                                    Analysing Data of a Online Retail Store using an ETL with Airflow, GCP BigQuery, dbt, Soda, and Looker
-                                </p>
-                                <a href="hhttps://lookerstudio.google.com/u/0/reporting/da5da0af-4be0-4f7d-a84b-f7c2892df612/" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                                <a href="https://github.com/Hamagistral/OnlineRetail-DataEng" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Repository
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 3 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/PowerBI-dashboard.PNG" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">
-                                    🔧 Analyzing Sales of AdventureWorks 🔌
-                                </h3>
-                                <p class="portfolio__description">
-                                    On-prem SQL Server to Azure Cloud Pipeline with Data Factory, Lake Storage, Spark, Databricks, PowerBI
-                                </p>
-                                <a href="https://github.com/Hamagistral/Azure-AW" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Repository
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 3 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/nyctaxi-etl.png" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">
-                                    NYC Taxi Data Analysis
-                                </h3>
-                                <p class="portfolio__description">
-                                    Analysing NYC Taxi Records data using Data Modeling, GCP Storage, Mage ETL, BigQuery, and Looker Studio.
-                                </p>
-                                <a href="https://bit.ly/nyctaxi-dashboard" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                                <a href="https://github.com/Hamagistral/NYCTaxi-Analytics-ETL" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Repository
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 2 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/decathlonchat.PNG" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">
-                                    Decathlon Chat
-                                </h3>
-                                <p class="portfolio__description">
-                                    A Customer Service Chatbot Trained on Decathlon Morocco Data
-                                </p>
-                                <a href="https://decathlon-chatbot.streamlit.app/" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                                <a href="https://github.com/Hamagistral/decathlon-chatbot" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Repository
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 5 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/atliqhospitality.png" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">
-                                    AtliQ Hospitality Dashboard
-                                </h3>
-                                <p class="portfolio__description">
-                                    A Data Analysis Project in Hospitality Domain with PowerBI
-                                </p>
-                                <a href="https://github.com/Hamagistral/Atliq-hospitality" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Repository
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
+            <!--==================== PROJECTS (HORIZONTAL SCROLL) ====================-->
+            <section class="projects-section section" id="portfolio">
+                <div class="projects-header container">
+                    <h2 class="section__title gradient-title" style="text-align:left; margin-bottom:.5rem;">My <span class="gradient-accent">Projects</span></h2>
+                    <p class="section__subtitle" style="text-align:left; margin-bottom:0;">// data · ml · web · ai</p>
+                    <div class="projects-filter">
+                        <span class="projects-filter__btn active" data-filter="all">All</span>
+                        <span class="projects-filter__btn" data-filter="data">Data Engineering</span>
+                        <span class="projects-filter__btn" data-filter="cloud">Cloud &amp; Analytics</span>
+                        <span class="projects-filter__btn" data-filter="ai">AI &amp; ML</span>
+                        <span class="projects-filter__btn" data-filter="web">Web &amp; AI</span>
                     </div>
+                </div>
 
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next">
-                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                    </div>
+                <div class="projects-sticky">
+                    <div class="projects-track" id="projects-track">
 
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
+                        <div class="project-card" data-category="web" data-aos="fade-up">
+                            <div class="project-card__header">
+                                <span class="project-card__num">01</span>
+                                <div class="project-card__meta">
+                                    <span class="project-card__category">Web App</span>
+                                    <h3 class="project-card__title">PixelWallet</h3>
+                                </div>
+                            </div>
+                            <div class="project-card__img"><img src="assets/img/pixelwallet.webp" alt="PixelWallet" loading="lazy"></div>
+                            <div class="project-card__body">
+                                <p class="project-card__desc">Secure gaming wallet for minors — lets young players manage in-game purchases with parental controls and spending limits.</p>
+                                <p class="project-card__tech">React · Next.js · Vercel</p>
+                                <div class="project-card__links">
+                                    <a href="https://pixelwallet-2qqllelj8-hamzas-projects-a8089634.vercel.app/" target="_blank" class="button button--flex button--small">Demo <i class="uil uil-arrow-right button__icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="ai" data-aos="fade-up" data-aos-delay="50">
+                            <div class="project-card__header">
+                                <span class="project-card__num">02</span>
+                                <div class="project-card__meta">
+                                    <span class="project-card__category">AI / Web App</span>
+                                    <h3 class="project-card__title">TeethSeg</h3>
+                                </div>
+                            </div>
+                            <div class="project-card__img"><img src="assets/img/teethseg.png" alt="TeethSeg" loading="lazy"></div>
+                            <div class="project-card__body">
+                                <p class="project-card__desc">AI-powered 3D teeth segmentation web app using MeshSegNet deep learning, serverless AWS deployment — cost cut from $85/mo to $1.3/1k.</p>
+                                <p class="project-card__tech">React · Three.js · FastAPI · Docker · AWS Lambda · Vercel</p>
+                                <div class="project-card__links">
+                                    <a href="https://teethseg-ai.vercel.app/" target="_blank" class="button button--flex button--small">Demo <i class="uil uil-arrow-right button__icon"></i></a>
+                                    <a href="https://github.com/Hamagistral/TeethSeg" target="_blank" class="button button--flex button--small button--white">GitHub <i class="uil uil-github button__icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="cloud" data-aos="fade-up" data-aos-delay="100">
+                            <div class="project-card__header">
+                                <span class="project-card__num">03</span>
+                                <div class="project-card__meta">
+                                    <span class="project-card__category">Cloud Analytics</span>
+                                    <h3 class="project-card__title">AdventureWorks Sales</h3>
+                                </div>
+                            </div>
+                            <div class="project-card__img"><img src="assets/img/PowerBI-dashboard.PNG" alt="AdventureWorks" loading="lazy"></div>
+                            <div class="project-card__body">
+                                <p class="project-card__desc">On-prem SQL Server to Azure Cloud pipeline using Data Factory, Lake Storage, Databricks Spark, and PowerBI reporting.</p>
+                                <p class="project-card__tech">Azure · Data Factory · Databricks · Spark · PowerBI</p>
+                                <div class="project-card__links">
+                                    <a href="https://github.com/Hamagistral/Azure-AW" target="_blank" class="button button--flex button--small button--white">GitHub <i class="uil uil-github button__icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="data" data-aos="fade-up" data-aos-delay="150">
+                            <div class="project-card__header">
+                                <span class="project-card__num">04</span>
+                                <div class="project-card__meta">
+                                    <span class="project-card__category">Data Engineering</span>
+                                    <h3 class="project-card__title">Online Retail Pipeline</h3>
+                                </div>
+                            </div>
+                            <div class="project-card__img"><img src="assets/img/etlonlineretail.png" alt="Online Retail Pipeline" loading="lazy"></div>
+                            <div class="project-card__body">
+                                <p class="project-card__desc">End-to-end ELT pipeline on GCP with Airflow orchestration, BigQuery, dbt transformations and Looker Studio dashboards.</p>
+                                <p class="project-card__tech">Airflow · GCP · BigQuery · dbt · Soda · Looker · Terraform</p>
+                                <div class="project-card__links">
+                                    <a href="https://github.com/Hamagistral/OnlineRetail-DataEng" target="_blank" class="button button--flex button--small button--white">GitHub <i class="uil uil-github button__icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="data" data-aos="fade-up" data-aos-delay="200">
+                            <div class="project-card__header">
+                                <span class="project-card__num">05</span>
+                                <div class="project-card__meta">
+                                    <span class="project-card__category">Data Engineering</span>
+                                    <h3 class="project-card__title">NYC Taxi Analytics</h3>
+                                </div>
+                            </div>
+                            <div class="project-card__img"><img src="assets/img/nyctaxi-etl.png" alt="NYC Taxi" loading="lazy"></div>
+                            <div class="project-card__body">
+                                <p class="project-card__desc">NYC Taxi records analysis using Mage ETL, GCP Storage, BigQuery data modeling, and Looker Studio interactive dashboards.</p>
+                                <p class="project-card__tech">Mage · GCP · BigQuery · Looker Studio · Python</p>
+                                <div class="project-card__links">
+                                    <a href="https://bit.ly/nyctaxi-dashboard" target="_blank" class="button button--flex button--small">Demo <i class="uil uil-arrow-right button__icon"></i></a>
+                                    <a href="https://github.com/Hamagistral/NYCTaxi-Analytics-ETL" target="_blank" class="button button--flex button--small button--white">GitHub <i class="uil uil-github button__icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="data" data-aos="fade-up" data-aos-delay="250">
+                            <div class="project-card__header">
+                                <span class="project-card__num">06</span>
+                                <div class="project-card__meta">
+                                    <span class="project-card__category">Data Engineering</span>
+                                    <h3 class="project-card__title">Data Engineering Jobs</h3>
+                                </div>
+                            </div>
+                            <div class="project-card__img"><img src="assets/img/dataeng.PNG" alt="Data Engineering Jobs" loading="lazy"></div>
+                            <div class="project-card__body">
+                                <p class="project-card__desc">Analyzing the Data Engineers job market in the USA and predicting salaries with ML models trained on Glassdoor data.</p>
+                                <p class="project-card__tech">Python · Streamlit · Scikit-learn · Pandas · Plotly</p>
+                                <div class="project-card__links">
+                                    <a href="https://jobsglassdoor-dataengineers.streamlit.app/" target="_blank" class="button button--flex button--small">Demo <i class="uil uil-arrow-right button__icon"></i></a>
+                                    <a href="https://github.com/Hamagistral/DataEngineers-Glassdoor" target="_blank" class="button button--flex button--small button--white">GitHub <i class="uil uil-github button__icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="ai" data-aos="fade-up" data-aos-delay="300">
+                            <div class="project-card__header">
+                                <span class="project-card__num">07</span>
+                                <div class="project-card__meta">
+                                    <span class="project-card__category">AI Chatbot</span>
+                                    <h3 class="project-card__title">Decathlon Chat</h3>
+                                </div>
+                            </div>
+                            <div class="project-card__img"><img src="assets/img/decathlonchat.PNG" alt="Decathlon Chat" loading="lazy"></div>
+                            <div class="project-card__body">
+                                <p class="project-card__desc">Customer service chatbot trained on Decathlon Morocco data using RAG architecture for accurate, context-aware responses.</p>
+                                <p class="project-card__tech">Streamlit · Langchain · ChromaDB · OpenAI API</p>
+                                <div class="project-card__links">
+                                    <a href="https://decathlon-chatbot.streamlit.app/" target="_blank" class="button button--flex button--small">Demo <i class="uil uil-arrow-right button__icon"></i></a>
+                                    <a href="https://github.com/Hamagistral/decathlon-chatbot" target="_blank" class="button button--flex button--small button--white">GitHub <i class="uil uil-github button__icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="ai" data-aos="fade-up" data-aos-delay="350">
+                            <div class="project-card__header">
+                                <span class="project-card__num">08</span>
+                                <div class="project-card__meta">
+                                    <span class="project-card__category">AI App</span>
+                                    <h3 class="project-card__title">GPTube</h3>
+                                </div>
+                            </div>
+                            <div class="project-card__img"><img src="assets/img/gptube.png" alt="GPTube" loading="lazy"></div>
+                            <div class="project-card__body">
+                                <p class="project-card__desc">YouTube video summarizer and Q&amp;A app — transcribes with Whisper, answers questions using Langchain and Streamlit UI.</p>
+                                <p class="project-card__tech">Streamlit · Whisper · Langchain · OpenAI · Python</p>
+                                <div class="project-card__links">
+                                    <a href="https://gptube.streamlit.app/" target="_blank" class="button button--flex button--small">Demo <i class="uil uil-arrow-right button__icon"></i></a>
+                                    <a href="https://github.com/Hamagistral/GPTube" target="_blank" class="button button--flex button--small button--white">GitHub <i class="uil uil-github button__icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="400">
+                            <div class="project-card__header">
+                                <span class="project-card__num">09</span>
+                                <div class="project-card__meta">
+                                    <span class="project-card__category">Web + AI</span>
+                                    <h3 class="project-card__title">BrandGenie</h3>
+                                </div>
+                            </div>
+                            <div class="project-card__img"><img src="assets/img/brandgenie.png" alt="BrandGenie" loading="lazy"></div>
+                            <div class="project-card__body">
+                                <p class="project-card__desc">AI branding assistant powered by OpenAI GPT-3 — generates brand names, slogans, keywords, and advertising copy for businesses.</p>
+                                <p class="project-card__tech">React · OpenAI GPT-3 · Vite · Vercel</p>
+                                <div class="project-card__links">
+                                    <a href="https://brandgenie.vercel.app" target="_blank" class="button button--flex button--small">Demo <i class="uil uil-arrow-right button__icon"></i></a>
+                                    <a href="https://github.com/Hamagistral/BrandGenie" target="_blank" class="button button--flex button--small button--white">GitHub <i class="uil uil-github button__icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card" data-category="cloud" data-aos="fade-up" data-aos-delay="450">
+                            <div class="project-card__header">
+                                <span class="project-card__num">10</span>
+                                <div class="project-card__meta">
+                                    <span class="project-card__category">Analytics</span>
+                                    <h3 class="project-card__title">AtliQ Hospitality</h3>
+                                </div>
+                            </div>
+                            <div class="project-card__img"><img src="assets/img/atliqhospitality.png" alt="AtliQ Dashboard" loading="lazy"></div>
+                            <div class="project-card__body">
+                                <p class="project-card__desc">Data analysis project in the hospitality domain — revenue, occupancy, and customer metrics tracked across properties with PowerBI.</p>
+                                <p class="project-card__tech">PowerBI · DAX · Power Query · Excel</p>
+                                <div class="project-card__links">
+                                    <a href="https://github.com/Hamagistral/Atliq-hospitality" target="_blank" class="button button--flex button--small button--white">GitHub <i class="uil uil-github button__icon"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- end projects-track -->
+                </div><!-- end projects-sticky -->
+            </section>
+
+            <!--==================== BLOG (dynamic from Medium) ====================-->
+            <section class="section" id="blog" data-aos="fade-up">
+                <h2 class="section__title gradient-title">Latest <span class="gradient-accent">Articles</span></h2>
+                <span class="section__subtitle">// from my medium blog</span>
+
+                <div class="blog__container container" id="blog-posts">
+                    <div class="blog__loading">
+                        <span class="blog__loading-dot"></span> Loading articles...
+                    </div>
                 </div>
             </section>
 
-            <!--==================== PORTFOLIO ====================-->
-            <section class="portfolio section" id="portfolio" data-aos="fade-up">
+            <!--==================== CONTACT ====================-->
+            <section class="contact section" id="contact" data-aos="fade-up">
+                <h2 class="section__title gradient-title">Get In <span class="gradient-accent">Touch</span></h2>
+                <span class="section__subtitle">// let's work together</span>
 
-                <span class="section__subtitle">
-                    Web Projects
-                </span>
-
-                <div class="portfolio__container container swiper-container">
-                    <div class="swiper-wrapper">
-
-                        <!--==================== PORTFOLIO 1 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/teethseg.png" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">
-                                    TeethSeg
-                                </h3>
-                                <p class="portfolio__description">
-                                    Web App AI Based Automated Teeth Segmentation using MeshSegNet
-                                </p>
-                                <a href="https://teethseg-ai.vercel.app/" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                                <a href="https://github.com/Hamagistral/TeethSeg" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Repository
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 1 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/brandgenie.png" alt="" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">
-                                    BrandGenie
-                                </h3>
-                                <p class="portfolio__description">
-                                    AI Branding Assistant Web App powered by OpenAI GPT3, that helps business owners generate brand name, slogan, keywords and ad copy.
-                                </p>
-                                <a href="https://brandgenie.vercel.app" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                                <a href="https://github.com/Hamagistral/BrandGenie" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Repository
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 2 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/gptube.png" alt="gptube" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">
-                                    GPTube: ChatGPT For YouTube 
-                                </h3>
-                                <p class="portfolio__description">
-                                    Youtube Video Summarizer and Question Answering App Using Whisper, Langchain and Streamlit
-                                </p>
-                                <a href="https://gptube.streamlit.app/" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                                <a href="https://github.com/Hamagistral/GPTube" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Repository
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 3 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/studynotes.png" alt="studynotes" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">
-                                    Studynotes 
-                                </h3>
-                                <p class="portfolio__description">
-                                    A Cornell Method Note-Taking Web App built with HTML, TailwindCSS, JS, Django and Youtube API.
-                                </p>
-                                <a href="https://youtu.be/B4FXn7qWPaQ" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                                <a href="https://github.com/Hamagistral/studynotes" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Repository
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!--==================== PORTFOLIO 4 ====================-->
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/dezoomcamp-ui.png" alt="studynotes" class="portfolio__img">
-
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">
-                                    DE Zoomcamp UI
-                                </h3>
-                                <p class="portfolio__description">
-                                    An Interactive UI for the Data Engineering Zoomcamp Course provided by DataTalksClub
-                                </p>
-                                <a href="https://dezoomcamp.streamlit.app/" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Demo
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                                <a href="https://github.com/Hamagistral/de-zoomcamp-ui" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Repository
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next">
-                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                    </div>
-
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                </div>
-            </section>
-
-            
-            
-
-            <!--==================== BLOG ====================-->
-            <section class="contact section" style="margin: 2rem  0;">
-                    <h2 class="section__title" style="margin: 4rem  0;">
-                        Blog
-                    </h2>
-                    <a href="https://medium.com/@hamza.lbelghiti/data-driven-decisions-using-the-modern-data-stack-999f901da0f5" target="_blank" class="container grid" style="margin-bottom: 2rem;">
-                        <div class="project__data">
-                            <h2 class="home__subtitle" style="margin-bottom: 1rem;">
-                                <strong>Data-Driven Decisions Using the Modern Data Stack</strong> 
-                            </h2>
-
-                            <span class="blog__subtitle">Is Your Data Holding You Back? Discover the Modern Data Stack tools for Data-Driven Success</span>
-
-                            <div class="about__buttons" style="padding-top: 1rem;">
-                                <p class="button button--flex button--white" style="margin-right: 1rem;">
-                                    Modern Data Stack
-                                </p>
-                                <p class="button button--flex button--white" style="margin-right: 1rem;">
-                                    Data Engineering
-                                </p>
-                                <p class="button button--flex button--white" style="margin-right: 1rem;">
-                                    Cloud
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://medium.com/@hamza.lbelghiti/how-openai-whisper-and-langchain-can-answer-any-question-you-have-from-a-youtube-video-278d04cc3460" target="_blank" class="container grid">
-                        <div class="project__data">
-                            <h2 class="home__subtitle" style="margin-bottom: 1rem;">
-                                <strong>Extracting Information From YouTube Video Using Whisper and Langchain</strong> 
-                            </h2>
-
-                            <span class="blog__subtitle">Build a Youtube Question Answering App Using Whisper, Langchain, and Streamlit</span>
-
-                            <div class="about__buttons" style="padding-top: 1rem;">
-                                <p class="button button--flex button--white" style="margin-right: 1rem;">
-                                    OpenAI
-                                </p>
-                                <p class="button button--flex button--white" style="margin-right: 1rem;">
-                                    Whisper
-                                </p>
-                                <p class="button button--flex button--white" style="margin-right: 1rem;">
-                                    Langchain
-                                </p>
-                                <p class="button button--flex button--white">
-                                    Streamlit
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-            </section>
-
-            <!--==================== CONTACT ME ====================-->
-            <section class="contact section" id="contact" style="margin-bottom: 5rem;">
-                <h2 class="section__title">
-                    Get In Touch
-                </h2>
-                <span class="section__subtitle" style="margin-top: 2rem; margin-bottom: 5rem;">
-                    Thank you for visiting my portfolio 🙏🏼 ! Feel free to contact me.
-                </span>
-                
                 <div class="contact__container container grid">
                     <div>
                         <div class="contact__information">
-                            <i class="uil uil-envelope contact__icon"></i>
-
+                            <div class="contact__icon"><i class="uil uil-envelope"></i></div>
                             <div>
-                                <h3 class="contact__title">
-                                    Email
-                                </h3>
-                                <span class="contact__subtitle">
-                                    hamza.lbelghiti@gmail.com
-                                </span>
+                                <h3 class="contact__title">Email</h3>
+                                <span class="contact__subtitle">hamza.lbelghiti@gmail.com</span>
                             </div>
                         </div>
                         <div class="contact__information">
-                            <i class="uil uil-map-marker contact__icon"></i>
-
+                            <div class="contact__icon"><i class="uil uil-map-marker"></i></div>
                             <div>
-                                <h3 class="contact__title">
-                                    Location
-                                </h3>
-                                <span class="contact__subtitle">
-                                    Toulouse, France
-                                </span>
+                                <h3 class="contact__title">Location</h3>
+                                <span class="contact__subtitle">Toulouse, France</span>
+                            </div>
+                        </div>
+                        <div class="contact__information">
+                            <div class="contact__icon"><i class="uil uil-linkedin"></i></div>
+                            <div>
+                                <h3 class="contact__title">LinkedIn</h3>
+                                <span class="contact__subtitle">hamza-elbelghiti</span>
                             </div>
                         </div>
                     </div>
+
                     <form action="mailto:hamza.lbelghiti@gmail.com" method="POST" enctype="text/plain" class="contact__form grid">
                         <div class="contact__inputs grid">
                             <div class="contact__content">
-                                <label for="name" class="contact__label">Name</label>
-                                <input type="text" id="Name" name="Name" class="contact__input" required>
+                                <label for="Name" class="contact__label">Name</label>
+                                <input type="text" id="Name" name="Name" class="contact__input" placeholder="Your name" required>
                             </div>
                             <div class="contact__content">
-                                <label for="email" class="contact__label">Email</label>
-                                <input type="email" id="Email" name="Email" class="contact__input" required>
+                                <label for="Email" class="contact__label">Email</label>
+                                <input type="email" id="Email" name="Email" class="contact__input" placeholder="your@email.com" required>
                             </div>
                         </div>
                         <div class="contact__content">
                             <label for="Message" class="contact__label">Message</label>
-                            <textarea id="Message" name="Message" cols="0" rows="7" class="contact__input" maxlength="3000" required></textarea>
+                            <textarea id="Message" name="Message" cols="0" rows="7" class="contact__input" placeholder="Your message..." maxlength="3000" required></textarea>
                         </div>
-
                         <div>
-                            <button type="submit" class="button button--flex" style="border: none; background-color: var(--first-color); color: #fff; padding: 1rem 1.75rem; border-radius: 0.5rem; font-weight: 500; transition: 0.3s;">
-                                Send Message
-                                <i class="uil uil-message button__icon"></i>
+                            <button type="submit" class="button button--flex">
+                                Send Message <i class="uil uil-message button__icon"></i>
                             </button>
                         </div>
                     </form>
@@ -1489,47 +631,26 @@
             </section>
         </main>
 
-        <!--===== FOOTER =====-->
         <footer class="footer">
             <p class="footer__title">&lt;Hamza El Belghiti /&gt;</p>
-            <div class="footer__social" style="margin-top: 2rem;">
-                <a href="https://www.linkedin.com/in/hamza-elbelghiti/" target="_blank" class="footer__icon"><i class='uil uil-linkedin button__icon' ></i></a>
-                <a href="https://github.com/Hamagistral" target="_blank" class="footer__icon"><i class='uil uil-github-alt button__icon' ></i></a>
-                <a href="https://medium.com/@hamza.lbelghiti" target="_blank" class="footer__icon"><i class="uil uil-medium-m button__icon"></i></a>
-                <a href="https://www.youtube.com/channel/UCfO7NQVb2LYHIejfJSmst6Q" target="_blank" class="footer__icon"><i class="uil uil-youtube button__icon"></i></a>
-                <a href="mailto:hamza.lbelghiti@gmail.com" target="_blank" class="footer__icon"><i class='uil uil-envelope button__icon' ></i></a>
+            <div class="footer__social">
+                <a href="https://www.linkedin.com/in/hamza-elbelghiti/" target="_blank" class="footer__icon"><i class="uil uil-linkedin"></i></a>
+                <a href="https://github.com/Hamagistral" target="_blank" class="footer__icon"><i class="uil uil-github-alt"></i></a>
+                <a href="https://medium.com/@hamza.lbelghiti" target="_blank" class="footer__icon"><i class="uil uil-medium-m"></i></a>
+                <a href="https://www.youtube.com/channel/UCfO7NQVb2LYHIejfJSmst6Q" target="_blank" class="footer__icon"><i class="uil uil-youtube"></i></a>
+                <a href="mailto:hamza.lbelghiti@gmail.com" target="_blank" class="footer__icon"><i class="uil uil-envelope"></i></a>
             </div>
-            <p class="footer__copy">
-                Made with 💖 by Hamza.
-            </p>
+            <p class="footer__copy">Built with passion by Hamza</p>
         </footer>
-        
-        <!--==================== SCROLL TOP ====================-->
+
         <a href="#" class="scrollup" id="scroll-up">
             <i class="uil uil-arrow-up scrollup__icon"></i>
         </a>
 
-        <!--==================== PARTICLES JS ====================-->
-        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-        <!--==================== BABYLON.JS ====================-->
-        <script src="https://cdn.babylonjs.com/babylon.js"></script>
-        <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
-
-        <!--==================== TYPED JS ====================-->
+        <script src="https://cdn.jsdelivr.net/npm/three@0.148.0/build/three.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-        <!--==================== AOS JS ====================-->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-        <!--==================== SWIPER JS ====================-->
         <script src="assets/js/swiper-bundle.min.js"></script>
-
-        <!--==================== MAIN JS ====================-->
         <script src="assets/js/main.js"></script>
-
-        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-    
     </body>
 </html>
