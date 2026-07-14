@@ -2,10 +2,10 @@
 
 import { motion } from "framer-motion";
 import { BadgeCheck } from "lucide-react";
-import Image from "next/image";
 import KeyboardHero from "../KeyboardHero";
 import { Reveal } from "../Reveal";
 import { TiltCard } from "../TiltCard";
+import { SkillIcon } from "../SkillIcon";
 import { SKILLS, CERTIFICATIONS } from "@/lib/data";
 import { SKILL_ICONS, CERT_ICONS } from "@/lib/skillIcons";
 
@@ -41,14 +41,7 @@ export function Skills() {
                         whileHover={{ scale: 1.08, y: -1 }}
                         className="inline-flex items-center gap-2 text-sm px-3.5 py-2 rounded-full border border-line text-muted hover:text-foreground hover:border-accent/50 transition-colors"
                       >
-                        {icon && (
-                          // eslint-disable-next-line @next/next/no-img-element
-                          <img
-                            src={`/icons/${icon.slug}.svg`}
-                            alt=""
-                            className={`w-4 h-4 opacity-90 ${icon.invert ? "invert" : ""}`}
-                          />
-                        )}
+                        {icon && <SkillIcon icon={icon} size={16} />}
                         {item}
                       </motion.span>
                     );
@@ -69,13 +62,7 @@ export function Skills() {
                   <div className="relative z-10 flex items-center gap-4">
                     <div className="w-11 h-11 rounded-xl bg-background/60 border border-line/70 flex items-center justify-center shrink-0">
                       {icon ? (
-                        <Image
-                          src={`/icons/${icon.slug}.svg`}
-                          alt={c.issuer}
-                          width={22}
-                          height={22}
-                          className={`opacity-90 ${icon.invert ? "invert" : ""}`}
-                        />
+                        <SkillIcon icon={icon} size={22} />
                       ) : (
                         <BadgeCheck size={20} className="text-accent" />
                       )}

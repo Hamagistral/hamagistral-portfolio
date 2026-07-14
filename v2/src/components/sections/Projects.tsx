@@ -19,11 +19,7 @@ export function Projects() {
         </Reveal>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {PROJECTS.map((p, i) => (
-            <Reveal
-              key={p.title}
-              delay={(i % 3) * 0.08}
-              className={p.featured ? "sm:col-span-2 lg:col-span-1" : ""}
-            >
+            <Reveal key={p.title} delay={(i % 3) * 0.08}>
               <motion.article
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.25 }}
@@ -44,11 +40,6 @@ export function Projects() {
                         {p.title}
                       </span>
                     </div>
-                  )}
-                  {p.featured && (
-                    <span className="absolute top-3 left-3 text-[11px] font-medium px-3 py-1 rounded-full bg-accent text-[#0a0e17]">
-                      Featured
-                    </span>
                   )}
                 </div>
                 <div className="p-6 flex flex-col flex-1">

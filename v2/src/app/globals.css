@@ -60,6 +60,26 @@ section {
   scroll-margin-top: 5rem;
 }
 
+/* Monochrome (black-fill) tech-logo SVGs, recolored via mask instead of
+   filter: invert — invert turns them white, which vanishes on the light
+   theme's pale chip backgrounds. Masking lets us pick an explicit color
+   per theme. */
+.icon-mono {
+  background-color: #ffffff;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-mode: alpha;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-mode: alpha;
+}
+
+[data-theme="light"] .icon-mono {
+  background-color: var(--accent);
+}
+
 .bg-grid {
   position: fixed;
   inset: 0;
