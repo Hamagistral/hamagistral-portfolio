@@ -2,7 +2,7 @@
 
 My personal portfolio website, built with Next.js and Three.js. Features a 3D interactive keyboard hero scene, animated sections for experience, skills, and projects, and a dark cyber-inspired aesthetic.
 
-**Live site:** [hamagistral.vercel.app](https://hamagistral.vercel.app) <!-- update with your actual domain -->
+**Live site:** [hamagistral.dev](https://hamagistral.dev)
 
 ## Tech Stack
 
